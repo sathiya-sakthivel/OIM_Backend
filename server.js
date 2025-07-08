@@ -2,6 +2,7 @@
 
 const express = require("express");
 const mysql = require("mysql2");
+const cors = require("cors");
 
 // ✅ Replace these with your Railway MySQL details:
 const DB_HOST = "gondola.proxy.rlwy.net";
@@ -11,6 +12,7 @@ const DB_NAME = "railway";
 const DB_PORT = 50765; // Railway usually uses 3306 for MySQL
 
 const app = express();
+app.use(cors());
 const PORT = 5000;
 
 // Create MySQL connection pool
